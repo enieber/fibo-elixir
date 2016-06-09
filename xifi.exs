@@ -1,10 +1,10 @@
-defmodule MyList do
-  def read([], []), do: IO.puts("End of list")
+defmodule ListInteraction do
+  def multiply([], []), do: :ok
      
-  def read([head | tail], [x | y]) do
+  def multiply([head | tail], [x | y]) do
     IO.puts(head * x)
-    read(tail, y)
+    multiply(tail, y)
   end
 end
 
-MyList.read([1, 2, 3, 4, 5, 6, 7], [10,13,18,19,25, 30,35])
+ListInteraction.multiply([1, 2, 3, 4, 5, 6, 7], [10,13,18,19,25, 30,35])
